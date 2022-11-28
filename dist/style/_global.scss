@@ -19,20 +19,30 @@ a{
    text-decoration: none;
 }
 
-.btn{
-   padding: 0.75rem 2rem;
-   border-radius: 2rem;
-   text-transform: uppercase;
-   font-weight: 600;
-   font-size: 1.25rem;
-   cursor: pointer;
-}
-
-.primary{
-   background: royalblue;
-   color: #fff;
-}
-
 .head{
    margin-bottom: 2rem;
+}
+
+button {
+   border: none;
+   outline: none;
+   font-size: 14px;
+   font-weight: 500;
+   border-radius: 0.6rem;
+}
+
+.btn {
+   @include flex();
+   padding: 0.4rem 1rem;
+   border: 2px solid royalblue;
+   border-radius: 0.5rem;
+   color: royalblue !important;
+   cursor: pointer;
+   font-weight: 500;
+   width: max-content;
+}
+
+.primary {
+   background: royalblue;
+   color: #fff !important;
 }

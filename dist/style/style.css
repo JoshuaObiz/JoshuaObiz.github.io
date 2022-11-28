@@ -19,30 +19,45 @@ a {
   text-decoration: none;
 }
 
+.head {
+  margin-bottom: 2rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 0.6rem;
+}
+
 .btn {
-  padding: 0.75rem 2rem;
-  border-radius: 2rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  gap: 1rem;
+  padding: 0.4rem 1rem;
+  border: 2px solid royalblue;
+  border-radius: 0.5rem;
+  color: royalblue !important;
   cursor: pointer;
+  font-weight: 500;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .primary {
   background: royalblue;
-  color: #fff;
-}
-
-.head {
-  margin-bottom: 2rem;
+  color: #fff !important;
 }
 
 .home {
   background: whitesmoke;
   display: flex;
-  align-items: space-between;
-  justify-content: 2rem;
-  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 .home .text {
   width: 45%;
@@ -110,14 +125,13 @@ a {
 }
 
 .endorsement {
-  position: relative;
   display: flex;
   align-items: center;
-  justify-content: unset;
+  justify-content: center;
   gap: 1rem;
   flex-direction: column;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 .endorsement .head {
   text-align: center;
@@ -128,19 +142,26 @@ a {
   align-items: start;
   justify-content: space-between;
   gap: 1rem;
+  margin-bottom: 6rem;
+}
+.endorsement .subjects .col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .endorsement .subjects .col h1 {
-  font-size: 2.25rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
   line-height: 1;
   text-transform: uppercase;
-  opacity: 0.7;
+  opacity: 0.4;
+  cursor: pointer;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
-.endorsement .subjects .col .btn {
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  text-transform: capitalize;
+.endorsement .subjects .col h1.active {
+  opacity: 0.8;
 }
 .endorsement .subjects .col .profile {
   display: flex;
@@ -171,21 +192,89 @@ a {
 .endorsement .subjects .col .profile .handle li::marker {
   color: royalblue;
 }
+.endorsement .subjects .col .btns {
+  display: flex;
+  gap: 1rem;
+}
 .endorsement .message {
   position: absolute;
-  background: whitesmoke;
-  width: 35rem;
+  background: rgb(200, 207, 211);
+  width: 28rem;
   left: -4rem;
   top: 120%;
   padding: 2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.12);
 }
 .endorsement .message::before {
   content: "";
   position: absolute;
-  background: whitesmoke;
+  background: rgb(200, 207, 211);
   width: 1.5rem;
   height: 1.5rem;
   left: 5.25rem;
   top: -0.75rem;
   transform: rotate(45deg);
+}
+.endorsement .activities {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 6rem;
+}
+.endorsement .activities .col {
+  max-width: 40%;
+}
+.endorsement .conclusion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  gap: 1rem;
+  padding: 0 15%;
+  position: relative;
+}
+.endorsement .conclusion div {
+  background: #d9f0ff;
+  padding: 3rem;
+  width: 100%;
+}
+.endorsement .conclusion div .btn {
+  margin-top: 4rem;
+}
+.endorsement .conclusion img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+footer {
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 2rem;
+  background: whitesmoke;
+  text-align: center;
+}
+footer .col h2 {
+  margin-bottom: 2rem;
+}
+footer .col .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+footer .col .social a {
+  color: royalblue;
+}
+footer .col .links a {
+  color: royalblue;
+}
+footer ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
 }

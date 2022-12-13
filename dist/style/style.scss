@@ -9,13 +9,16 @@
 
 .home {
    background: whitesmoke;
-   @include flex(center,space-between, 2rem);
+   @include flex(center, space-between, 2rem);
+
    .text {
       width: 45%;
+
       h1 {
          font-size: 4.25rem;
          line-height: 1.2;
       }
+
       p {
          margin-bottom: 2rem;
       }
@@ -27,20 +30,24 @@
    overflow: hidden;
    @include flex();
    flex-direction: column;
-   padding-left: 15%;
-   padding-right: 15%;
+   padding-left: 10%;
+   padding-right: 10%;
+
    .intro {
       text-align: center;
       margin-bottom: 3rem;
+
       h3 {
          font-size: 2.5rem;
       }
    }
+
    .info {
       @include flex(unset, space-between, 2rem);
       width: 100%;
       margin-bottom: 6rem;
       position: relative;
+
       &::after {
          z-index: -1;
          position: absolute;
@@ -53,20 +60,28 @@
          -webkit-box-sizing: border-box;
          box-sizing: border-box;
       }
+
       &:nth-child(odd) {
          &::after {
             border-color: #d9f0ff;
             background: #d9f0ff;
          }
       }
+
       h1 {
-         font-size: 2.25rem;
+         font-size: 2rem;
          line-height: 1;
          margin-bottom: 0rem;
       }
+
       .text {
-         width: 40%;
+         width: 50%;
       }
+
+      img {
+         width: 400px;
+      }
+
       li {
          margin-bottom: 1rem;
       }
@@ -78,17 +93,26 @@
    flex-direction: column;
    padding-left: 5rem;
    padding-right: 5rem;
+
    .head {
       text-align: center;
    }
+
    .subjects {
-      width: 100%;
-      @include flex(start, space-between);
+      @include flex(center, space-between);
       margin-bottom: 6rem;
+
+      .subject {
+         display: flex;
+         gap: 1rem;
+      }
+
       .col {
          display: flex;
          flex-direction: column;
+         align-items: center;
          gap: 1rem;
+
          h1 {
             font-size: 2rem;
             margin-bottom: .5rem;
@@ -97,82 +121,66 @@
             opacity: 0.4;
             cursor: pointer;
             width: max-content;
-            &.active{
+
+            &.active {
                opacity: 0.8;
             }
          }
+
          .profile {
             @include flex($gap: 2rem);
+
             .img {
                position: relative;
+
                img {
                   width: 4rem;
                   height: 4rem;
                   border-radius: 50%;
                }
             }
+
             .handle {
                @include flex($gap: 2rem);
-               p{
+
+               p {
                   font-weight: 500;
                }
+
                li {
                   font-size: 0.85rem;
+
                   &::marker {
                      color: royalblue;
                   }
                }
             }
          }
-         .btns{
+
+         .btns {
             display: flex;
             gap: 1rem;
          }
       }
    }
 
-   .message{
-      position: absolute;
-      background: rgb(200, 207, 211);
-      width: 28rem;
-      left: -4rem;
-      top: 120%;
-      padding: 2rem;
-      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.12);
-      &::before{
-         content: '';
-         position: absolute;
-         background: rgb(200, 207, 211);
-         width: 1.5rem;
-         height: 1.5rem;
-         left: 5.25rem;
-         top: -0.75rem;
-         transform: rotate(45deg);
-      }
-   }
-
-   .activities{
-      @include flex(center, space-between);
-      margin-bottom: 6rem;
-      .col{
-         max-width: 40%;
-      }
-   }
-
-   .conclusion{
+   .conclusion {
       width: 100%;
       @include flex(center);
       padding: 0 15%;
       position: relative;
-      div{
+
+      div {
          background: #d9f0ff;
          padding: 3rem;
          width: 100%;
-         .btn{
+
+         .btn {
             margin-top: 4rem;
          }
       }
-      img{
+
+      img {
          position: absolute;
          bottom: 0;
          right: 0;
@@ -181,31 +189,36 @@
 }
 
 
-footer{
+footer {
    padding: 3rem 4rem;
    @include flex(start, space-between, 2rem);
    background: whitesmoke;
    text-align: center;
-   .col{
-      h2{
+   flex-wrap: wrap;
+
+   .col {
+      h2 {
          margin-bottom: 2rem;
       }
 
-      .social{
-         @include flex(center, center);
-         a{
+      .social {
+         @include flex(center, center, 1.5rem);
+
+         a {
             color: royalblue;
+            font-size: 1.5rem;
          }
       }
 
-      .links{
-         a{
+      .links {
+         a {
             color: royalblue;
          }
       }
    }
-   ul{
-      li{
+
+   ul {
+      li {
          list-style: none;
          margin-bottom: 1rem;
          display: flex;
@@ -213,3 +226,5 @@ footer{
       }
    }
 }
+
+@import 'media';

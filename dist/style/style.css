@@ -78,8 +78,8 @@ button {
   justify-content: unset;
   gap: 1rem;
   flex-direction: column;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .about .intro {
   text-align: center;
@@ -113,12 +113,15 @@ button {
   background: #d9f0ff;
 }
 .about .info h1 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1;
   margin-bottom: 0rem;
 }
 .about .info .text {
-  width: 40%;
+  width: 50%;
+}
+.about .info img {
+  width: 400px;
 }
 .about .info li {
   margin-bottom: 1rem;
@@ -137,16 +140,20 @@ button {
   text-align: center;
 }
 .endorsement .subjects {
-  width: 100%;
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 6rem;
 }
+.endorsement .subjects .subject {
+  display: flex;
+  gap: 1rem;
+}
 .endorsement .subjects .col {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 .endorsement .subjects .col h1 {
@@ -196,35 +203,6 @@ button {
   display: flex;
   gap: 1rem;
 }
-.endorsement .message {
-  position: absolute;
-  background: rgb(200, 207, 211);
-  width: 28rem;
-  left: -4rem;
-  top: 120%;
-  padding: 2rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.12);
-}
-.endorsement .message::before {
-  content: "";
-  position: absolute;
-  background: rgb(200, 207, 211);
-  width: 1.5rem;
-  height: 1.5rem;
-  left: 5.25rem;
-  top: -0.75rem;
-  transform: rotate(45deg);
-}
-.endorsement .activities {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 6rem;
-}
-.endorsement .activities .col {
-  max-width: 40%;
-}
 .endorsement .conclusion {
   width: 100%;
   display: flex;
@@ -256,6 +234,7 @@ footer {
   gap: 2rem;
   background: whitesmoke;
   text-align: center;
+  flex-wrap: wrap;
 }
 footer .col h2 {
   margin-bottom: 2rem;
@@ -264,10 +243,11 @@ footer .col .social {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 footer .col .social a {
   color: royalblue;
+  font-size: 1.5rem;
 }
 footer .col .links a {
   color: royalblue;
@@ -277,4 +257,58 @@ footer ul li {
   margin-bottom: 1rem;
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 990px) {
+  .home .text h1 {
+    font-size: 2.75rem;
+  }
+  .home img {
+    width: 40vw;
+  }
+  .about .info {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .about .info::after {
+    display: none;
+  }
+  .about .info.first {
+    flex-wrap: wrap-reverse;
+  }
+  .about .info img {
+    width: 100%;
+  }
+  .about .info .text {
+    width: 95%;
+    text-align: center;
+  }
+  .about .info .text li {
+    list-style: none;
+  }
+  .endorsement {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .endorsement .subjects {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .endorsement .subjects .col {
+    width: 100%;
+    align-items: center;
+  }
+  .endorsement .subjects .subject {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .endorsement .conclusion {
+    padding: 0;
+  }
 }

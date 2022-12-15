@@ -105,6 +105,18 @@
       .subject {
          display: flex;
          gap: 1rem;
+         h1 {
+            font-size: 2rem;
+            margin-bottom: .5rem;
+            line-height: 1;
+            text-transform: uppercase;
+            opacity: 0.4;
+            width: max-content;
+   
+            &.active {
+               opacity: 0.8;
+            }
+         }
       }
 
       .col {
@@ -113,19 +125,6 @@
          align-items: center;
          gap: 1rem;
 
-         h1 {
-            font-size: 2rem;
-            margin-bottom: .5rem;
-            line-height: 1;
-            text-transform: uppercase;
-            opacity: 0.4;
-            cursor: pointer;
-            width: max-content;
-
-            &.active {
-               opacity: 0.8;
-            }
-         }
 
          .profile {
             @include flex($gap: 2rem);
@@ -191,18 +190,18 @@
 
 footer {
    padding: 3rem 4rem;
-   @include flex(start, space-between, 2rem);
+   @include flex(start, space-between, 2rem 3rem);
    background: whitesmoke;
-   text-align: center;
    flex-wrap: wrap;
 
    .col {
+      align-items: start;
       h2 {
-         margin-bottom: 2rem;
+         margin-bottom: 1rem;
       }
 
       .social {
-         @include flex(center, center, 1.5rem);
+         @include flex(center, start, 1.5rem);
 
          a {
             color: royalblue;
@@ -222,7 +221,7 @@ footer {
          list-style: none;
          margin-bottom: 1rem;
          display: flex;
-         justify-content: center;
+         justify-content: start;
       }
    }
 }

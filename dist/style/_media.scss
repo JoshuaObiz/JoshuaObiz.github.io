@@ -67,3 +67,29 @@
    }
 
 }
+@media screen and (max-width: 768px) {
+   .home {
+      padding: 2rem;
+      flex-direction: column;
+      .text {
+         width: 95%;
+         margin-bottom: 3rem;
+      }
+
+      img {
+         width: 95%;
+      }
+   }
+}
+
+@media screen and (max-width: 425px) {
+   .about, .endorsement{
+      padding: 1rem;
+      >div{
+         padding: 1rem;
+      }
+   }
+   footer{
+      padding: 2rem;
+   }
+}

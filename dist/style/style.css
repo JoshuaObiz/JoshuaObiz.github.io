@@ -150,25 +150,24 @@ button {
   display: flex;
   gap: 1rem;
 }
-.endorsement .subjects .col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-.endorsement .subjects .col h1 {
+.endorsement .subjects .subject h1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
   line-height: 1;
   text-transform: uppercase;
   opacity: 0.4;
-  cursor: pointer;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
-.endorsement .subjects .col h1.active {
+.endorsement .subjects .subject h1.active {
   opacity: 0.8;
+}
+.endorsement .subjects .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 .endorsement .subjects .col .profile {
   display: flex;
@@ -231,18 +230,20 @@ footer {
   display: flex;
   align-items: start;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 2rem 3rem;
   background: whitesmoke;
-  text-align: center;
   flex-wrap: wrap;
 }
+footer .col {
+  align-items: start;
+}
 footer .col h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 footer .col .social {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 1.5rem;
 }
 footer .col .social a {
@@ -256,7 +257,7 @@ footer ul li {
   list-style: none;
   margin-bottom: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: start;
 }
 
 @media screen and (max-width: 990px) {
@@ -310,5 +311,29 @@ footer ul li {
   }
   .endorsement .conclusion {
     padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home {
+    padding: 2rem;
+    flex-direction: column;
+  }
+  .home .text {
+    width: 95%;
+    margin-bottom: 3rem;
+  }
+  .home img {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .about, .endorsement {
+    padding: 1rem;
+  }
+  .about > div, .endorsement > div {
+    padding: 1rem;
+  }
+  footer {
+    padding: 2rem;
   }
 }

@@ -101,6 +101,7 @@
    .subjects {
       @include flex(center, space-between);
       margin-bottom: 6rem;
+      flex-direction: column;
 
       .subject {
          display: flex;
@@ -121,45 +122,10 @@
 
       .col {
          display: flex;
-         flex-direction: column;
          align-items: center;
-         gap: 1rem;
-
-
-         .profile {
-            @include flex($gap: 2rem);
-
-            .img {
-               position: relative;
-
-               img {
-                  width: 4rem;
-                  height: 4rem;
-                  border-radius: 50%;
-               }
-            }
-
-            .handle {
-               @include flex($gap: 2rem);
-
-               p {
-                  font-weight: 500;
-               }
-
-               li {
-                  font-size: 0.85rem;
-
-                  &::marker {
-                     color: royalblue;
-                  }
-               }
-            }
-         }
-
-         .btns {
-            display: flex;
-            gap: 1rem;
-         }
+         justify-content: center;
+         flex-wrap: wrap;
+         gap: 2rem;
       }
    }
 

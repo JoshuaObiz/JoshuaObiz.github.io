@@ -145,6 +145,7 @@ button {
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 6rem;
+  flex-direction: column;
 }
 .endorsement .subjects .subject {
   display: flex;
@@ -165,42 +166,10 @@ button {
 }
 .endorsement .subjects .col {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 1rem;
-}
-.endorsement .subjects .col .profile {
-  display: flex;
-  align-items: center;
-  justify-content: unset;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
-}
-.endorsement .subjects .col .profile .img {
-  position: relative;
-}
-.endorsement .subjects .col .profile .img img {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-}
-.endorsement .subjects .col .profile .handle {
-  display: flex;
-  align-items: center;
-  justify-content: unset;
-  gap: 2rem;
-}
-.endorsement .subjects .col .profile .handle p {
-  font-weight: 500;
-}
-.endorsement .subjects .col .profile .handle li {
-  font-size: 0.85rem;
-}
-.endorsement .subjects .col .profile .handle li::marker {
-  color: royalblue;
-}
-.endorsement .subjects .col .btns {
-  display: flex;
-  gap: 1rem;
 }
 .endorsement .conclusion {
   width: 100%;
